@@ -1,5 +1,4 @@
 apply plugin: 'com.android.library'
-apply plugin: 'maven'
 android {
     compileSdkVersion 25
     buildToolsVersion '25.0.2'
@@ -16,7 +15,6 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-
 }
 
 dependencies {
@@ -26,25 +24,5 @@ dependencies {
 
 repositories {
     jcenter()
-    mavenCentral()
-}
 
-//设置maven deployer
-uploadArchives {
-    repositories {
-        mavenDeployer {
-            //设置插件的G`V参数
-            pom.groupId = 'yj.plugin'
-            pom.artifactId = 'utils'
-            pom.version = 1.0
-            //提交到远程服务器：
-            // repository(url: "http://www.xxx.com/repos") {
-            //    authentication(userName: "admin", password: "admin")
-            // }
-            //本地的Maven地址
-            //文件发布到下面目录
-//            repository(url: uri('/Users/yangjian/Desktop/testworkspace/warehouse'))
-            repository(url: uri('/Users/yangjian/Desktop/testworkspace/MavenUtils/mavenlib'))
-        }
-    }
 }
