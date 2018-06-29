@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/MavenUtils.iml" filepath="$PROJECT_DIR$/MavenUtils.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/buildsrc/buildsrc.iml" filepath="$PROJECT_DIR$/buildsrc/buildsrc.iml" />
       <module fileurl="file://$PROJECT_DIR$/mavenlib/mavenlib.iml" filepath="$PROJECT_DIR$/mavenlib/mavenlib.iml" />
     </modules>
   </component>
