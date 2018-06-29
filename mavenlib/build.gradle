@@ -1,10 +1,7 @@
 apply plugin: 'com.android.library'
-
+apply plugin: 'maven'
 android {
     compileSdkVersion 26
-
-
-
     defaultConfig {
         minSdkVersion 16
         targetSdkVersion 26
@@ -26,9 +23,30 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-
     implementation 'com.android.support:appcompat-v7:26.1.0'
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'com.android.support.test:runner:1.0.2'
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+}
+
+repositories {
+    jcenter()
+    mavenCentral()
+}
+
+//设置maven deployer
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            //设置插件的G`V参数
+            pom.groupId = 'yj.plugin'
+            pom.artifactId = 'utils'
+            pom.version = 1.0
+            //提交到远程服务器：
+            // repository(url: "http://www.xxx.com/repos") {
+            //    authentication(userName: "admin", password: "admin")
+            // }
+            //本地的Maven地址
+            //文件发布到下面目录
+//            repository(url: uri('/Users/yangjian/Desktop/testworkspace/warehouse'))
+            repository(url: uri('/Users/yangjian/Desktop/testworkspace/MavenUtils/mavenlib'))
+        }
+    }
 }

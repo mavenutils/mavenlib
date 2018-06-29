@@ -7,3 +7,7 @@
 /build
 /captures
 .externalNativeBuild
+app/libs/
+mavenlib/libs/
+mavenlib/src/main/java/
+mavenlib/src/main/res/drawable/
